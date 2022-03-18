@@ -1,0 +1,281 @@
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  margin: 0;
+}
+/* background */
+#app_body {
+  background-image: url(../img/books-2463779_1920.jpg);
+  background-position: top;
+  background-clip: border-box;
+  background-size: cover;
+  height: 100%;
+}
+/* app.blade.php => Main Title */
+.home_title {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.home_title::after {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #333;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: transform .3s;
+}
+
+.home_title:hover::after {
+  transform-origin: right top;
+  transform: scale(1, 1);
+}
+
+
+
+/* Error_Message */
+.message {
+  position: relative;
+}
+.err_style {
+  background-color: yellow;
+  text-align: center;
+  top:  0;                     
+  bottom:  0;                  
+  left:  0;                  
+  right:  0;
+  display: block;
+  margin: auto;
+}
+
+/* Title Name List */
+.title h1 {
+    animation: left 2s ease-out infinite alternate;
+}
+@keyframes left{
+  0%{
+    transform: translateX(50);
+  }
+  100%{
+    transform: translateY(-35px);
+  }
+}
+
+#span_title {
+  border: dashed 3px #6594e0;
+}
+
+
+/* home => Search-Form */
+.search_form {
+  display: flex;
+  margin: auto;
+} 
+
+.search_box {
+  background-color: white;
+  margin: auto;
+}
+
+.main-post-table {
+  margin: 18px;
+  border: double 4px red;
+}
+
+.first-main-body .title-name  {
+  position: relative;
+  display: inline-block;
+}
+
+.first-main-body .title-name::after {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #333;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: transform .3s;
+
+} 
+
+.first-main-body .title-name:hover::after {
+  transform-origin: right top;
+  transform: scale(1, 1);
+  background-color: orange;
+}
+
+.second-main-body {
+  text-align: center;
+}
+
+.detail-btn a {
+  display: block;
+	position: relative;
+	width: 120px;
+	padding: 0.8em;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+	background: #455A64;
+	border:1px solid #fff;
+	overflow: hidden;
+  margin: auto;
+}
+
+.detail-btn a:after {
+	content:"";
+	position: absolute;
+	top: -100%;
+	left: -100%;
+	height: 100%;
+	width: 160px;
+	background : #fff;
+  color: #fff;
+	opacity: 0.3;
+	transition: .4s;
+}
+
+.detail-btn a:hover:after {
+	top: 0;
+	left: 0;
+}
+
+/* Detai.blade.php */
+.span-name {
+  border-bottom: solid 3px black;
+}
+.content {
+  border: solid 5px lime;
+}
+
+.passege p {
+  width: 80%;
+  word-wrap: break-word;
+  margin: auto;
+}
+
+/* Comment.blade.php */
+.comment-main {
+  background: pink;
+}
+.comment-content p {
+  word-wrap: break-word;
+}
+.comment-name a {
+  text-decoration: none;
+
+}
+
+/* User.blade.php */
+.header-name span {
+  position: relative;
+  padding: 0.6em;
+  background: linear-gradient(lime, yellow);
+}
+.user-title span {
+  border-bottom: dashed 3px yellow;
+}
+.user-content span {
+  border-bottom: dashed 3px yellow;
+}
+.user-create span {
+  border-bottom: dashed 3px yellow;
+}
+
+.header-name span:after {
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 30px;
+  border: 15px solid transparent;
+  border-top: 15px solid #fff000;
+  width: 0;
+  height: 0;
+}
+
+.header-name {
+  animation: header-name 0.7s cubic-bezier(0.33, 1, 0.68, 1) 1 forwards;
+}
+ 
+@keyframes header-name {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+ 
+.user-titcon h5, 
+.user-titcon p {
+  word-wrap: break-word;
+}
+
+
+@media (min-width: 1000px) {
+  .container {
+    width: 70%;
+  }
+  .main-posts {
+    width: 90%;
+    margin: auto;
+    padding: 16px;
+  }
+  .main-post-table {
+    margin: 20px;
+    border: double 4px blue;
+    transition-duration: .6s;
+  }
+  .main-post-table:hover {
+    transform: scale(1.1, 1.1);
+  }
+  .main-body {
+    display: flex;
+
+  }
+
+  .first-main-body h2 {
+    word-wrap: break-word;
+  }
+  .second-main-body {
+    width: 300px; 
+    text-align: center;
+  }
+/* Detai.blade.php */
+.content {
+  width: 64%;
+  margin: auto; 
+}
+.de-main {
+  width: 60%;
+}
+.flex-main {
+  display: flex;
+}
+.passege p {
+  width: 80%;
+  word-wrap: break-word;
+  margin: auto;
+}
+
+/* Comment */
+.comment-main {
+  width: 56%;
+  margin: auto;
+}
+/* User.blade.php */
+.user-body {
+  width: 50%;
+  margin: auto;
+}
+}
