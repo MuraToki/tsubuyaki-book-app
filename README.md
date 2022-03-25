@@ -20,6 +20,8 @@ This web application is designed to be a web application for people who like to 
 ## TSUBUYAKI BOOK内で使用している技術一覧
 - デプロイはherokuを使用
 - データベースはMySQLを使用
+- Laravel
+- PHP
 
 ## Author
 Tokiya　Muramatsu
