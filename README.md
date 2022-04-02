@@ -15,6 +15,7 @@ This web application is designed to be a web application for people who like to 
 - 投稿の削除機能
 - 投稿の編集機能
 - 検索機能
+- バリデーション
 
 
 ## TSUBUYAKI BOOK内で使用している技術一覧
