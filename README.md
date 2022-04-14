@@ -9,7 +9,7 @@ This web application is designed to be a web application for people who like to 
 ## TSUBUYAKI BOOKの機能一覧
 - 投稿機能
 - 投稿にコメント機能
-- ログイン・ログアウトのような認証機能
+- ログイン・ログアウトのような認証機能【ゲストログインも追加】
 - ページネーション機能
 - いいね機能
 - 投稿の削除機能
