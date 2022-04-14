@@ -71,6 +71,9 @@
                                     <a class="nav-link fw-bold fs-5" href="{{ route('register') }}">{{ __('新規登録') }}</a>
                                 </li>
                             @endif
+                            <div class="nav-item">
+                                <a href="{{ route('login.guest') }}" class="nav-link fw-bold fs-5">ゲストログイン</a>
+                            </div>
                             @else
                             
                             @auth
