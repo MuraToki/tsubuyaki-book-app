@@ -16,6 +16,7 @@ use App\Http\Controllers\FavoriteController;
 |
 */
 
+Route::get('guest', [App\Http\Controllers\Auth\LoginController::class,'guestLogin'])->name('login.guest');
 
 Auth::routes();
 
