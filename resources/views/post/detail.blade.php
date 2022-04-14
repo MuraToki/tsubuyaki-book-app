@@ -31,14 +31,14 @@
         <div class="good-count mt-4">
             @if($post->users()->where('user_id', Auth::id())->exists())
             <div class="my-3 text-center">
-                <form action="{{ route('unfavorites', $post) }}" method="POST" onSubmit="return checkDlete()">
+                <form action="{{ route('unfavorites', $post) }}" method="POST" onSubmit="return unlikeSubmit()">
                     @csrf
                     <button type="submit" class="btn btn-danger rounded-pill"><i class="fa-solid fa-heart"></i>・{{ $post->users()->count() }}</button>
                 </form> 
             </div>
             @else
             <div class="my-3 text-center">
-                <form action="{{ route('favorites', $post) }}" method="POST" onSubmit="return checkSubmit()">
+                <form action="{{ route('favorites', $post) }}" method="POST" onSubmit="return likeSubmit()">
                     @csrf
                     <button type="submit" class="btn btn-primary rounded-pill"><i class="fa-solid fa-heart"></i>・{{ $post->users()->count() }}</button>
                 </form>
@@ -61,7 +61,7 @@
         </div>
         @if(Auth::user()->id == $post->user_id)
         <div class="only-user-btn justify-content-center mt-3" style="display: flex;" >
-        <form method="POST" action="{{ route('delete', $post->id)}}" onSubmit="return checkDlete()">
+        <form method="POST" action="{{ route('delete', $post->id)}}" onSubmit="return bookDlete()">
             @csrf
             <button type="submit" class="btn btn-danger me-4" onclick=><i class="fas fa-trash-alt"></i></button>
         </form>
@@ -109,7 +109,7 @@
     @endforeach
 
 <script>
-function checkDlete(){
+function bookDlete(){
     if(confirm('削除してもいいかな？')){
         return true;
     } else {
@@ -117,14 +117,14 @@ function checkDlete(){
         }
     }
 
-    function checkSubmit(){
+    function likeSubmit(){
         if(confirm('いいねを押す覚悟はあるか？＊押したあとリスト画面へ戻るよ！')){
             return true;
         } else {
             return false;
             }
         }
-    function checkDlete(){
+    function unlikeSubmit(){
         if(confirm('いいねを取り消す覚悟はあるか？＊押したあとリスト画面へ戻るよ！')){
             return true;
         } else {
